@@ -1,0 +1,76 @@
+****************
+* Magic Square Due: 1/25
+* CS-221-3
+* 1/25/2019
+* Nicholas Prussen
+**************** 
+
+OVERVIEW:
+
+ This program can both check and create magic square to and from text files in a specific format.
+
+
+INCLUDED FILES:
+
+ * MagicSquareDriver.java - source file
+ * MagicSquare.java - source file
+ * README - this file
+
+
+COMPILING AND RUNNING:
+
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the commands:
+ $ javac MagicSquareDriver.java
+ $ javac MagicSquare.java
+
+ Run the compiled class file with the command:
+ **Use either of these to execute**
+ (Replace the items {filename} and {gridsize}, respectively with your desired filename and gridsize)
+ 
+ - To create a file with a magic square -
+ $ java MagicSquareDriver -create {filename} {gridsize}
+ 
+ - To check if a file contains a valid magic square -
+ $ java MagicSquareDriver -check {filename}
+ 
+ 
+
+ Console output will give the results after the program finishes.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ This program contains two main classes, MagicSquare.java and MagicSquareDriver.java
+ 
+ - MagicSquareDriver -
+ This class is the main driver and the only class to accept commands from the command line.
+ This class exists to take in the parameters and pass them to the MagicSquare class only. Everything beyond is handled in the MagicSquare class.
+ 
+ - MagicSquare -
+ This class contains several public and private methods to read/write magic squares and check their validity.
+ The MagicSquareDriver will call either the createMagicSquare() or checkMatrix() methods depending on the commandline parameters.
+ 
+ - Future Applications -
+ The main methods that will be used for creating and checking squares are public methods and can be called independantly. New private methods with different parameters and abilities can be added to 
+ further the ability of the main public methods. 
+ 
+ 
+
+TESTING:
+
+ I created multiple test methods before I started the driver to test input with multiple of my own/provided text files and focused on reading and checking matricies. Next,
+ I used modified versions of the matricies text files to check for invalid input and exceptions for even numbers. Lastly I created the methods for building matricies and writing to txt files and
+ used my proven check method to test whether my algorithm worked correctly.
+
+
+DISCUSSION:
+ 
+ My initial problems with this project was the driver not understanding my inputs from the commandline but that was solved by switching to using ".equals()" instead. The other problem I experienced was
+ my initial attempts at transferring the algorithm from suedo code to Java proved to not work especially well and I had to look up example code to understand how the algorithm worked.
+ 
+EXTRA CREDIT:
+
+ If the project had opportunities for extra credit that you attempted,
+ be sure to call it out so the grader does not overlook it.
+
